@@ -1,0 +1,6 @@
+@SeguroBatchEngine.Api_HostAddress = http://localhost:5147
+
+GET {{SeguroBatchEngine.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
