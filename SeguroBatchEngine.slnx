@@ -1,2 +1,5 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SeguroBatchEngine.Api/SeguroBatchEngine.Api.csproj" />
+  </Folder>
 </Solution>
