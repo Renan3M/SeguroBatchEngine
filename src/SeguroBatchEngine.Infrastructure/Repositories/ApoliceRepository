@@ -1,0 +1,28 @@
+using Dapper;
+using Microsoft.Data.SqlClient;
+using SeguroBatchEngine.Domain.Entities;
+using SeguroBatchEngine.Domain.Interfaces;
+
+namespace SeguroBatchEngine.Infrastructure.Repositories;
+
+public class ApoliceRepository : IApoliceRepository
+{
+    private readonly string _connectionString;
+
+    public ApoliceRepository(string connectionString)
+    {
+        _connectionString = connectionString;
+    }
+
+    public async Task InserirLoteAsync(IEnumerable<Apolice> apolices)
+    {
+        const string sql = @"
+            INSERT INTO Apolices (Id, NumeroApolice, CpfCnpjSegurado, ValorPremio, DataInicioVigencia, DataFimVigencia, MetodoIngestao, DataProcessamento)
+            VALUES (@Id, @NumeroApolice, @CpfCnpjSegurado, @ValorPremio, @DataInicioVigencia, @DataFimVigencia, @MetodoIngestao, @DataProcessamento);";
+
+        using var connection = new SqlConnection(_connectionString);
+        await connection.OpenAsync();
+        
+        await connection.ExecuteAsync(sql, apolices);
+    }
+}

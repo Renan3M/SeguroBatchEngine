@@ -18,4 +18,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SeguroBatchEngine.Application\SeguroBatchEngine.Application.csproj" />
+    <ProjectReference Include="..\..\src\SeguroBatchEngine.Domain\SeguroBatchEngine.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,9 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/SeguroBatchEngine.Api/SeguroBatchEngine.Api.csproj" />
+    <Project Path="src/SeguroBatchEngine.Infrastructure/SeguroBatchEngine.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SeguroBatchEngine.UnitTests/SeguroBatchEngine.UnitTests.csproj" />
   </Folder>
 </Solution>

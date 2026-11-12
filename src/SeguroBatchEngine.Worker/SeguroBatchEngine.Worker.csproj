@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
     <PackageReference Include="StackExchange.Redis" Version="3.4.31" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SeguroBatchEngine.Application\SeguroBatchEngine.Application.csproj" />
+  </ItemGroup>
 </Project>

@@ -12,4 +12,8 @@
     <PackageReference Include="StackExchange.Redis" Version="3.4.31" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SeguroBatchEngine.Domain\SeguroBatchEngine.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
