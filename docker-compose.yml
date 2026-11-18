@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -17,7 +15,7 @@ services:
     container_name: seguro_rabbitmq
     ports:
       - "5672:5672"     # AMQP
-      - "15672:15672"   # Management Dashboard
+      - "15672:15672"   # Management Dashboard (admin / admin)
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
@@ -27,6 +25,13 @@ services:
     container_name: seguro_redis
     ports:
       - "6379:6379"
+
+  aspire-dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:latest
+    container_name: seguro_otel_dashboard
+    ports:
+      - "18888:18888"   # Painel Visual OpenTelemetry
+      - "4317:18889"    # Porta OTLP gRPC
 
 volumes:
   sqlserver_data:

@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/SeguroBatchEngine.Api/SeguroBatchEngine.Api.csproj" />
+    <Project Path="src/SeguroBatchEngine.Application/SeguroBatchEngine.Application.csproj" />
+    <Project Path="src/SeguroBatchEngine.Domain/SeguroBatchEngine.Domain.csproj" />
     <Project Path="src/SeguroBatchEngine.Infrastructure/SeguroBatchEngine.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/tests/">
